@@ -1,9 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero-pattern': "url('/assets/hero.png')",
+      },
+      fontFamily: {
+        outfit: ["Outfit", "sans-serif"]
+      },
+    },
   },
   plugins: [],
 }
-
