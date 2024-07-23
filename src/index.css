@@ -28,12 +28,16 @@
   .btn{
     @apply bg-white text-[#212121] py-[14px] px-[25px] rounded-[30px] cursor-pointer border-0 outline-0 inline-flex items-center justify-center
   }
+  .dark-btn{
+    @apply bg-[#212ea0] text-white
+  }
   .btn img{
     @apply w-[20px] ml-[10px]
   }
   .container2{
     @apply px-[10%]
   }
+
  
   
 }
@@ -53,5 +57,13 @@
   .caption img{
     @apply w-[60px] mb-[10px]
   }
-  
+  .slide{
+    @apply shadow-my-shadow p-[40px] rounded-[10px] text-[#676767] leading-[1.4]
+  }
+  .user-info{
+    @apply flex items-center mb-[20px] text-[15px]
+  }
+  .user-info h3{
+    @apply text-[#212ea0] font-bold
+  }
 }
