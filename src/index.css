@@ -17,14 +17,41 @@
     @apply bg-[#f5f5f5]
   }
   nav{
-    @apply w-screen  bg-[#333] text-white py-[4px] px-0 sticky top-0 left-0 flex items-center justify-between z-10
+    @apply w-screen bg-transparent text-white py-[4px] px-0 sticky top-0 left-0 flex items-center justify-between z-10
+  }
+  .dark-nav{
+    @apply bg-[#212ea0] transition duration-500
   }
   nav ul  li{
     @apply inline-block my-[5px] mx-[20px] text-base
   }
   .btn{
-    @apply bg-white text-[#212121] py-[14px] px-[25px] rounded-[30px] cursor-pointer border-0 outline-0
+    @apply bg-white text-[#212121] py-[14px] px-[25px] rounded-[30px] cursor-pointer border-0 outline-0 inline-flex items-center justify-center
+  }
+  .btn img{
+    @apply w-[20px] ml-[10px]
+  }
+  .container2{
+    @apply px-[10%]
   }
  
+  
+}
+
+
+@layer components{
+ 
+  .program img{
+    @apply block w-full rounded-[10px] cursor-pointer
+  }
+  .program{
+    @apply basis-[31%] relative}
+  .caption{
+    @apply rounded-[10px] absolute top-0 left-0 right-0 bottom-0 bg-[rgba(0,15,152,0.3)] flex items-center justify-center flex-col text-white cursor-pointer opacity-0 hover:opacity-100 transition duration-500 delay-500 
+  }
+
+  .caption img{
+    @apply w-[60px] mb-[10px]
+  }
   
 }

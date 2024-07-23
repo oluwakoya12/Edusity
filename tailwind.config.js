@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('/assets/hero.png')",
+        'hero-pattern': "linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)), url('/src/assets/hero.png')",
       },
       fontFamily: {
         outfit: ["Outfit", "sans-serif"]
