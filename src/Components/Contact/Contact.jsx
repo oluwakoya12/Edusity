@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import message_icon from '../../assets/msg-icon.png'
 import mail_icon from '../../assets/mail-icon.png'
 import phone_icon from '../../assets/phone-icon.png'
@@ -7,6 +7,44 @@ import white_arrow from '../../assets/white-arrow.png'
 
 
 function Contact() {
+
+
+    const [result, setResult] = useState("")
+
+   const submit = async (event) => {
+        event.preventDefault()
+        setResult("Sending......")
+
+        const mydata = new FormData(event.target)
+
+        mydata.append("access_key", "c6f1dcbf-d7d8-4d11-94e6-38b03b300c2e")
+
+        try{
+            const res = await fetch("https://api.web3forms.com/submit", {
+                method: 'POST',
+                body: mydata
+            })
+
+            const response = await res.json()
+
+            if(res.ok){
+                setResult("Email sent succsesfully")
+                event.target.reset()
+            } else{
+                setResult(`Submission failed: ${response.message}`)
+            }
+
+        } catch(error){
+            setResult(`Error: ${error.message}`)
+
+        }
+   }
+
+
+
+
+
+
   return (
     <div className='my-[80px] mx-auto max-w-[90%] flex items-center justify-between'>
         <div className='basis-[48%] text-[#676767]'>
@@ -19,7 +57,7 @@ function Contact() {
             </ul>
         </div>
         <div className='basis-[48%] text-[#676767]'>
-            <form >
+            <form onSubmit={submit}>
                 <label>Your Name</label>
                 <input className='block w-full bg-[#ebecfe] p-[15px] border-0 outline-0 mb-[15px] mt-[5px] resize-none' type="text" name='name' placeholder='Enter your name' required/>
                 <label>Phone Number</label>
@@ -28,7 +66,7 @@ function Contact() {
                 <textarea className='block w-full bg-[#ebecfe] p-[15px] border-0 outline-0 mb-[15px] mt-[5px] resize-none' name="message" rows="6" placeholder='Enter your message'></textarea>
                 <button type='submit' className='btn dark-btn'>Submit Now <img src={white_arrow} alt="" /></button>
             </form>
-            <span className='block my-[20px] mx-0'>{}</span>
+            <span className='block my-[20px] mx-0'>{result}</span>
         </div>
       
     </div>
