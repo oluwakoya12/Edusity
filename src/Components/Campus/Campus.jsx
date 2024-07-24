@@ -7,7 +7,7 @@ import white_arrow from '../../assets/white-arrow.png'
 
 function Campus() {
   return (
-    <div className='my-[80px] w-[90%] mx-auto text-center'>
+    <div className='my-[80px] w-[90%] mx-auto text-center'  id='campus'>
       <div className='flex items-center justify-between mb-[40px] '>
         <img src={gallery_1} alt="" className='w-[23%] rounded-[10px]' />
         <img src={gallery_2} alt="" className='w-[23%] rounded-[10px]' />

@@ -4,7 +4,7 @@ import play_icon from '../../assets/play-icon.png'
 
 function About() {
   return (
-    <div className='my-[100px] mx-auto flex items-center justify-between w-[90%]'>
+    <div className='my-[100px] mx-auto flex items-center justify-between w-[90%]' id='about'>
       <div className='basis-[40%] relative'> 
         <img src={about_img} alt="About" className='w-full rounded-[10px]'/>
         <img src={play_icon} alt="" className='w-[60px] rounded-[10px] absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2'/>

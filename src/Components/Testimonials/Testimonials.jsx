@@ -29,7 +29,7 @@ function Testimonials() {
     }
 
   return (
-    <div className='my-[80px] mx-auto py-0 px-[80px] relative '>
+    <div className='my-[80px] mx-auto py-0 px-[80px] relative ' id='testimonials'>
         <img src={next_icon} alt="" className='absolute top-[50%] right-0 -translate-y-1/2 p-[15px] w-[50px] rounded-[50%] bg-[#212ea0] cursor-pointer' onClick={slideForward}/>
         <img src={back_icon} alt="" className='absolute top-[50%] left-0 -translate-y-1/2 p-[15px] w-[50px] rounded-[50%] bg-[#212ea0] cursor-pointer' onClick={slideBackward}/>
         <div className='overflow-hidden '>

@@ -8,7 +8,7 @@ import program_icon_3 from '../../assets/program-icon-3.png'
 
 function Programs() {
   return (
-    <div className='my-[80px] mx-auto w-[90%] flex items-center justify-between'>
+    <div className='my-[80px] mx-auto w-[90%] flex items-center justify-between' id='programs'>
         <div className='program'>
             <img src={program_1} alt="" />
             <div className="caption">

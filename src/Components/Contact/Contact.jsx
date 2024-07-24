@@ -46,7 +46,7 @@ function Contact() {
 
 
   return (
-    <div className='my-[80px] mx-auto max-w-[90%] flex items-center justify-between'>
+    <div className='my-[80px] mx-auto max-w-[90%] flex items-center justify-between' id='contact'>
         <div className='basis-[48%] text-[#676767]'>
             <h3 className='text-[#000f38] font-medium text-[25px] flex items-center mb-[20px]'>Send us a message <img className='w-[35px] ml-[10px]' src={message_icon} alt="" /></h3>
             <p className='max-w-[450px] leading-[1.3] '>Feel free to reach out through contact form or find our contact infomation below. Your feedback, questions and suggestions are important to us as we strive to provide exceptional service to our unoversity community</p>
